@@ -11,22 +11,28 @@ def draw():
     
     background(255)
     noStroke()
+    fill(255)
+    rect(0, 0, 470, 770)
     fill(255, 147, 102)
-    rect(0, 490, home_width, home_height)
+    rect(30, 490, 410, home_height, 20)
     
-    #logo
+    
+    # logo
     textSize(85)
     fill(0)
     text(" beneFIT+ ", 20, 300)
     
-    #survey
-    textSize(70)
+    # survey
     fill(255)
+    textSize(65)
     text(" Take Survey ", 15, 590)
+    
 
+    # if mouseClicked:
+    #     base_color = 100
+        
 def mouseClicked():
     if mouseY >= 490 and mouseY <= 640:
-
+        base_color = 100
         
-    
         
