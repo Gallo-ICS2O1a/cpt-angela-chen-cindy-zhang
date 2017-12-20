@@ -1,3 +1,21 @@
+home_width = 470
+home_height = 150
+page1 = True
+page2 = False
+page3A = False
+page3B = False
+page3C = False
+pg1_orange = color(255, 147, 102)
+pg1_text = color(255)
+pg2_black = 0
+pg2_grey1 = 0
+pg2_grey2 = 0
+pg2_grey3 = 0
+pg2_white1 = 255
+pg2_white2 = 255
+pg2_white3 = 255
+
+
 def setup():
     size(470, 770)
     
