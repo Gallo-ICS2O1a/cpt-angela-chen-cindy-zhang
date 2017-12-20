@@ -30,7 +30,7 @@ def draw():
     fill(255)
     background(255)
     
-    #page 1
+    # page 1
     if page1:
         # logo
         fill(0)
@@ -56,14 +56,14 @@ def draw():
             pg1_text = 255
         
 
-    #page 2
+    # page 2
     elif page2:
         fill(100)
         font1 = loadFont("HPSimplified-Regular-48.vlw")
         textFont(font1, 50)
         text("beneFIT+", 40, 70)
     
-        #question box
+        # question box
         fill(255, 147, 102)
         triangle(80, 80, 55, 100, 105, 100)
         rect(30,100,410,230,20)
@@ -73,7 +73,7 @@ def draw():
         text("What is your goal?", 58, 235)
         
         
-        #answer box 1
+        # answer box 1
         fill(pg2_grey1)
         rect(30, 365, 410, 100, 20)
         font3 = loadFont("MicrosoftJhengHeiBold-48.vlw")
@@ -84,7 +84,7 @@ def draw():
         textFont (font4, 30)
         text("Lose Weight", 150, 430)
         
-        #answer box 1 when mouse hovers
+        # answer box 1 when mouse hovers
         if mouseX <= 440 and mouseX >= 30 and mouseY >= 365 and mouseY <= 465:
             pg2_grey1 = 200
             pg2_white1 = 100
@@ -93,7 +93,7 @@ def draw():
             pg2_white1 = 255
         
         
-        #answer box 2
+        # answer box 2
         fill(pg2_grey2)
         rect(30, 500, 410, 100, 20)
         fill(pg2_white2)
@@ -102,7 +102,7 @@ def draw():
         textFont (font4, 30)
         text("Gain Muscle", 150, 565)
         
-        #answer box 2 when mouse hovers
+        # answer box 2 when mouse hovers
         if mouseX <= 440 and mouseX >= 30 and mouseY >= 500 and mouseY <= 600:
             pg2_grey2 = 200
             pg2_white2 = 100
@@ -111,7 +111,7 @@ def draw():
             pg2_grey2 = 100
             pg2_white2 = 255
         
-        #answer box 3
+        # answer box 3
         fill(pg2_grey3)
         rect(30, 635, 410, 100, 20)
         fill(pg2_white3)
@@ -120,7 +120,7 @@ def draw():
         textFont (font4, 30)
         text("Be Fit Overall", 150, 700)
         
-        #answer box 3 when mouse hovers
+        # answer box 3 when mouse hovers
         if mouseX <= 440 and mouseX >= 30 and mouseY >= 635 and mouseY <= 735:
             pg2_grey3 = 200
             pg2_white3 = 100
@@ -139,25 +139,25 @@ def draw():
         textSize(45)
         text("A. Lose Weight", 40, 130)
         
-        #DIET
+        # DIET
         noStroke()
         fill(216, 242, 104)
         rect(30, 200, 200, 200, 20)
         
-        #EXERCISE
+        # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
         
-        #PROGRESS
+        # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
         
-        #HYDRATION
+        # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
     
     if page3B:
-        #logo
+        # logo
         background(255)
         fill(100)
         font1 = loadFont("HPSimplified-Regular-48.vlw")
@@ -167,25 +167,25 @@ def draw():
         textSize(45)
         text("B. Gain Muscle", 40, 130)
         
-        #DIET
+        # DIET
         noStroke()
         fill(216, 242, 104)
         rect(30, 200, 200, 200, 20)
         
-        #EXERCISE
+        # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
         
-        #PROGRESS
+        # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
         
-        #HYDRATION
+        # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
     
     if page3C:
-        #logo
+        # logo
         background(255)
         fill(100)
         font1 = loadFont("HPSimplified-Regular-48.vlw")
@@ -195,20 +195,20 @@ def draw():
         textSize(45)
         text("C. Be Fit Overall", 40, 130)
         
-        #DIET
+        # DIET
         noStroke()
         fill(216, 242, 104)
         rect(30, 200, 200, 200, 20)
         
-        #EXERCISE
+        # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
         
-        #PROGRESS
+        # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
         
-        #HYDRATION
+        # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
 
@@ -221,7 +221,7 @@ def mousePressed():
     global pg2_white1, pg2_white2, pg2_white3
     global pg2_grey1, pg2_grey2, pg2_grey3 
     
-    #button for page 1 "Take Survey"
+    # button for page 1 "Take Survey"
     if page1:
         if mouseY >= 440 and mouseY <= 590:
             if mouseX <=440 and mouseX >= 30:
