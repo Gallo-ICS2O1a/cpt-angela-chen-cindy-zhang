@@ -20,30 +20,26 @@ def draw():
     rect(352.5, 670, 117.5, 100)
     
     # calendar
-    for y in range(225, 575, 75):
-        for x in range(60, 410, 50):
-            stroke(180)
+    for y in range(200, 420, 220):
+        for x in range(45, 410, 100):
+            stroke(200)
             fill(225)
-            rect(x, y, 50, 75) 
+            rect(x, y, 80, 200) 
+        
+    for y in range(420, 555, 200):
+        for x in range(100, 350, 100):
+            stroke(200)
+            fill(225)
+            rect(x, y, 80, 200) 
             
     # title
     textSize(70)
     fill(0)
-    text(" progress ", 10, 75)
+    text("  progress ", 10, 75)
     
-    # month
+    # week
     textSize(50)
     fill(0)
-    text(" month ", 40, 175)
-    
-    
-            
-    
-            
-    
-    
-    
-    
-    
+    text(" week ", 40, 155)
     
     
