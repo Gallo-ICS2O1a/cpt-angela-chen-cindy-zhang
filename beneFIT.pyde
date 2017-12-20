@@ -1,21 +1,3 @@
-home_width = 470
-home_height = 150
-page1 = True
-page2 = False
-page3A = False
-page3B = False
-page3C = False
-pg1_orange = color(255, 147, 102)
-pg1_text = color(255)
-pg2_black = 0
-pg2_grey1 = 0
-pg2_grey2 = 0
-pg2_grey3 = 0
-pg2_white1 = 255
-pg2_white2 = 255
-pg2_white3 = 255
-
-
 def setup():
     size(470, 770)
     
@@ -44,14 +26,16 @@ def draw():
         fill(pg1_text)
         font2 = loadFont("NirmalaUI-Bold-48.vlw")
         textFont(font2, 55)
-        text(" Take Survey ", 60, 540)
+        text(" Take Survey ", 60, 535)
         
         # survey when hover
         if mouseY >= 440 and mouseY <= 590:
             if mouseX <=440 and mouseX >= 30:
                 pg1_orange = color(255, 181, 150)
+                pg1_text = color(198, 93, 49)
         else:
             pg1_orange = color(255, 147, 102)
+            pg1_text = 255
         
 
     #page 2
@@ -215,6 +199,7 @@ def draw():
 def mousePressed():
     global pg1_orange
     global pg1_text
+    global buttonPg1
     global pg2_white1, pg2_white2, pg2_white3
     global pg2_grey1, pg2_grey2, pg2_grey3 
     
@@ -222,16 +207,10 @@ def mousePressed():
     if page1:
         if mouseY >= 440 and mouseY <= 590:
             if mouseX <=440 and mouseX >= 30:
-                pg1_orange = color(255)
-            
-# if not page 1 and page2:
-    
-# if not page1:
-#     if page2:
-    #         if mouseY >= 
-                
-                
-         
+                buttonPg1 = True
+        else:
+            buttonPg1 = False
+       
     
 def mouseReleased():
     global page1, page2, page3A, page3B, page3C
