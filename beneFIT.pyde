@@ -14,6 +14,9 @@ pg2_grey3 = 0
 pg2_white1 = 255
 pg2_white2 = 255
 pg2_white3 = 255
+pg3_diet_button = color(216, 242, 104)
+# pg3_exercise_button = color(
+# pg3_
 
 
 def setup():
@@ -129,7 +132,7 @@ def draw():
             pg2_white3 = 255
             
     if page3A:
-        #logo
+        # logo
         background(255)
         fill(100)
         font1 = loadFont("HPSimplified-Regular-48.vlw")
@@ -139,23 +142,38 @@ def draw():
         textSize(45)
         text("A. Lose Weight", 40, 130)
         
-        # DIET
+        # diet
         noStroke()
-        fill(216, 242, 104)
+        fill(pg3_diet_button)
         rect(30, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("DIET", 94, 320)
         
+        # diet hover
+        # if mouseX >= 30 and mouseX <= 320:
+        #     if mouseY >= 200 and mouseY <= 400:
+                
         # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("EXERCISE", 263, 320)
         
         # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("PROGRESS", 43, 530)
         
         # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
-    
+        fill(255)
+        textSize(40)
+        text("HYDRATION", 245, 530)
     if page3B:
         # logo
         background(255)
@@ -171,18 +189,30 @@ def draw():
         noStroke()
         fill(216, 242, 104)
         rect(30, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("DIET", 94, 320)
         
         # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("EXERCISE", 263, 320)
         
         # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("PROGRESS", 43, 530)
         
         # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("HYDRATION", 245, 530)
     
     if page3C:
         # logo
@@ -199,19 +229,30 @@ def draw():
         noStroke()
         fill(216, 242, 104)
         rect(30, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("DIET", 94, 320)
         
         # EXERCISE
         fill(244, 176, 107)
         rect(240, 200, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("EXERCISE", 263, 320)
         
         # PROGRESS
         fill(174, 252, 223)
         rect(30, 410, 200, 200, 20)
+        fill(255)
+        textSize(40)
+        text("PROGRESS", 43, 530)
         
         # HYDRATION
         fill(94, 193, 192)
         rect(240, 410, 200, 200, 20)
-
+        fill(255)
+        textSize(40)
+        text("HYDRATION", 245, 530)
 
 
 def mousePressed():
