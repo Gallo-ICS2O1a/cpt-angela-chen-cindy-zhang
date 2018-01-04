@@ -114,8 +114,19 @@ def draw():
             stroke(155)
             noFill()
             rect(x, y, 75, 175)
- 
-    
+            
+    # numbers
+    textSize(50)
+    fill(0)
+    text("1", 57, 300)
+    text("2", 162, 300)
+    text("3", 265, 300)
+    text("4", 370, 300)
+    text("5", 57, 500)
+    text("6", 162, 500)
+    text("7", 265, 500)
+    text("8", 370, 500)
+   
 def mousePressed():
     global cup1
     global cup2
@@ -125,6 +136,7 @@ def mousePressed():
     global cup6
     global cup7
     global cup8
+    
     
     if mouseX >= 34 and mouseX <= 109:
         if mouseY <= 375 and mouseY >= 200:
@@ -157,14 +169,3 @@ def mousePressed():
     if mouseX >= 361 and mouseX <= 436:
         if mouseY >= 445 and mouseY <= 620:
             cup8 = True
-            
-            
-
-            
-        
-            
-    
-  
-        
-    
-    
