@@ -19,7 +19,7 @@ def draw():
     fill(94, 193, 192)
     rect(352.5, 670, 117.5, 100)
     
-    #title
+    # title
     textSize(70)
     fill(0)
     text("beneFIT+", 230, 200)
