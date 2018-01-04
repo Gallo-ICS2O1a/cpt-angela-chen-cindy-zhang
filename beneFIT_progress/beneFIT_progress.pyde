@@ -85,7 +85,7 @@ def draw():
         for y in range(200, 420, 220):
             for x in range(45, 410, 100):
                 stroke(235)
-                fill(240,248,255)
+                fill(240, 248, 255)
                 rect(x, y, 80, 200) 
             
         for y in range(420, 555, 200):
@@ -107,39 +107,15 @@ def draw():
         #text on page
         
         if p_base_page:
-            # monday text
+            # text
             textSize(50)
             fill(0)
             text("M", 62.5, 300)
-            
-            # tuesday text
-            textSize(50)
-            fill(0)
             text("T", 170, 300)
-            
-            # wednesday text
-            textSize(50)
-            fill(0)
             text("W", 265, 300)
-            
-            # thursday text
-            textSize(50)
-            fill(0)
             text("T", 370, 300)
-            
-            # friday text
-            textSize(50)
-            fill(0)
             text("F", 125, 520)
-            
-            # saturday text
-            textSize(50)
-            fill(0)
             text("S", 225, 520)
-            
-            # sunday text
-            textSize(50)
-            fill(0)
             text("S", 325, 520)
             
   
