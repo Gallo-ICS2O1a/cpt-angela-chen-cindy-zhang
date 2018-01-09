@@ -2,13 +2,13 @@ homepage = True
 progress_button = False
 hydration_button = False
 p_base_page = False
-p_page1 = False
-p_page2 = False
-p_page3 = False
-p_page4 = False
-p_page5 = False
-p_page6 = False
-p_page7 = False
+p_pg1 = False
+p_pg2 = False
+p_pg3 = False
+p_pg4 = False
+p_pg5 = False
+p_pg6 = False
+p_pg7 = False
 p_back1 = False
 p_back2 = False
 p_back3 = False
@@ -55,7 +55,7 @@ def setup():
 def draw():
     global homepage
     global progress_button, hydration_button
-    global p_page1, p_page2, p_page3, p_page4, p_page5, p_page6, p_page7
+    global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
     global p_base_page
     global p_done_colour, p_day_button_colour
@@ -159,7 +159,7 @@ def draw():
             text("S", 325, 520)
             
     # back buttons
-    if p_page1 or p_page2 or p_page3 or p_page4 or p_page5 or p_page6 or p_page7:
+    if p_pg1 or p_pg2 or p_pg3 or p_pg4 or p_pg5 or p_pg6 or p_pg7:
         fill(220)
         rect(10, 10, 50, 30, 20)
         
@@ -179,7 +179,7 @@ def draw():
         rect(352.5, 670, 117.5, 100)
     
     # day page checkboxes
-    if p_page1:
+    if p_pg1:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 250, 80, 20)
@@ -200,7 +200,7 @@ def draw():
         fill(P1_button_colour3)
         rect(350, 385, 40, 40, 10)
     
-    if p_page2:
+    if p_pg2:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 250, 80, 20)
@@ -222,7 +222,7 @@ def draw():
         fill(P2_button_colour3)
         rect(350, 385, 40, 40, 10)
         
-    if p_page3:
+    if p_pg3:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 325, 80, 20)
@@ -244,7 +244,7 @@ def draw():
         fill(P3_button_colour3)
         rect(350, 385, 40, 40, 10)
     
-    if p_page4:
+    if p_pg4:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 290, 80, 20)
@@ -266,7 +266,7 @@ def draw():
         fill(P4_button_colour3)
         rect(350, 385, 40, 40, 10)
         
-    if p_page5:
+    if p_pg5:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 200, 80, 20)
@@ -288,7 +288,7 @@ def draw():
         fill(P5_button_colour3)
         rect(350, 385, 40, 40, 10)
         
-    if p_page6:
+    if p_pg6:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 280, 80, 20)
@@ -310,7 +310,7 @@ def draw():
         fill(P6_button_colour3)
         rect(350, 385, 40, 40, 10)
         
-    if p_page7:
+    if p_pg7:
         noStroke()
         fill(p_done_colour)
         rect(80, 95, 235, 80, 20)
@@ -335,7 +335,7 @@ def draw():
 def mousePressed():
     global homepage
     global progress_button, hydration_button
-    global p_page1, p_page2, p_page3, p_page4, p_page5, p_page6, p_page7
+    global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
     global p_base_page
     global p_done_colour, p_done_button_colour
@@ -360,60 +360,60 @@ def mousePressed():
         # page1 / monday
         if mouseX >= 45 and mouseX <= 125:
             if mouseY >= 200 and mouseY <= 400:
-                p_page1 = True
+                p_pg1 = True
                 p_base_page = False
         
         # page2 / tuesday
         if mouseX >= 145 and mouseX <= 225:
             if mouseY >= 200 and mouseY <= 400:
-                p_page2 = True
+                p_pg2 = True
                 p_base_page = False
             
         # page3 / wednesday
         if mouseX >= 245 and mouseX <= 325:
             if mouseY >= 200 and mouseY <= 400:
-                p_page3 = True
+                p_pg3 = True
                 p_base_page = False
         
         # page4 / thursday
         if mouseX >= 365 and mouseX <= 425:
             if mouseY >= 200 and mouseY <= 400:
-                p_page4 = True
+                p_pg4 = True
                 p_base_page = False
             
         # page5 / friday
         if mouseX >= 100 and mouseX <= 180:
             if mouseY >= 420 and mouseY <= 620:
-                p_page5 = True
+                p_pg5 = True
                 p_base_page = False
         
         # page6 / saturday
         if mouseX >= 200 and mouseX <= 280:
             if mouseY >= 420 and mouseY <= 620:
-                p_page6 = True
+                p_pg6 = True
                 p_base_page = False
                         
         # page7 / sunday
         if mouseX >= 300 and mouseX <= 380:
             if mouseY >= 420 and mouseY <= 620:
-                p_page7 = True
+                p_pg7 = True
                 p_base_page = False
             
     # back buttons  
-    if p_page1 or p_page2 or p_page3 or p_page4 or p_page5 or p_page6 or p_page7:      
+    if p_pg1 or p_pg2 or p_pg3 or p_pg4 or p_pg5 or p_pg6 or p_pg7:      
         if mouseX >= 10 and mouseX <= 60:
             if mouseY >= 10 and mouseY <= 40:
-                p_page1 = False
-                p_page2 = False
-                p_page3 = False
-                p_page4 = False
-                p_page5 = False
-                p_page6 = False
-                p_page7 = False
+                p_pg1 = False
+                p_pg2 = False
+                p_pg3 = False
+                p_pg4 = False
+                p_pg5 = False
+                p_pg6 = False
+                p_pg7 = False
                 p_base_page = True
             
     # check box buttons
-    if p_page1:
+    if p_pg1:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P1_button_colour1 = p_done_colour
@@ -422,7 +422,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P1_button_colour3 = p_done_colour
                               
-    if p_page2:
+    if p_pg2:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P2_button_colour1 = p_done_colour
@@ -431,7 +431,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P2_button_colour3 = p_done_colour
                 
-    if p_page3:
+    if p_pg3:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P3_button_colour1 = p_done_colour
@@ -440,7 +440,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P3_button_colour3 = p_done_colour
                 
-    if p_page4:
+    if p_pg4:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P4_button_colour1 = p_done_colour
@@ -449,7 +449,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P4_button_colour3 = p_done_colour
                 
-    if p_page5:
+    if p_pg5:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P5_button_colour1 = p_done_colour
@@ -458,7 +458,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P5_button_colour3 = p_done_colour
                 
-    if p_page6:
+    if p_pg6:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P6_button_colour1 = p_done_colour
@@ -467,7 +467,7 @@ def mousePressed():
             elif mouseY >= 385 and mouseY <= 425:
                 P6_button_colour3 = p_done_colour
                 
-    if p_page7:
+    if p_pg7:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
                 P7_button_colour1 = p_done_colour
