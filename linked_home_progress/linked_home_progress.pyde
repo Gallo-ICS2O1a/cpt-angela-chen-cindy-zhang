@@ -17,7 +17,7 @@ p_back5 = False
 p_back6 = False
 p_back7 = False
 p_done_colour = color(174, 252, 223)
-P1_button_colour1 = 255 
+P1_button_colour1 = 255
 P1_button_colour2 = 255
 P1_button_colour3 = 255
 P2_button_colour1 = 255
@@ -38,7 +38,7 @@ P6_button_colour3 = 255
 P7_button_colour1 = 255
 P7_button_colour2 = 255
 P7_button_colour3 = 255
-p_day_button_colour = color(240,248,255)
+p_day_button_colour = color(240, 248, 255)
 p1_all_checked = False
 p2_all_checked = False
 p3_all_checked = False
@@ -47,8 +47,10 @@ p5_all_checked = False
 p6_all_checked = False
 p7_all_checked = False
 
+
 def setup():
     size(470, 770)
+    
     
 def draw():
     global homepage
@@ -64,7 +66,8 @@ def draw():
     global P5_button_colour1, P5_button_colour2, P5_button_colour3
     global P6_button_colour1, P6_button_colour2, P6_button_colour3
     global P7_button_colour1, P7_button_colour2, P7_button_colour3
-    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked, p5_all_checked, p6_all_checked, p7_all_checked
+    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked
+    global p5_all_checked, p6_all_checked, p7_all_checked
     
     background(255)
     if homepage: 
@@ -99,7 +102,6 @@ def draw():
             the diet page, orange represents exercise, 
             the mint green is progress and the 
             turquoise tracks hydration.""", 210, 275) 
-        
 
     # base page
     if p_base_page:
@@ -129,7 +131,7 @@ def draw():
         for y in range(420, 555, 200):
             for x in range(100, 350, 100):
                 stroke(235)
-                fill(240,248,255)
+                fill(240, 248, 255)
                 rect(x, y, 80, 200) 
                 
         # title
@@ -142,7 +144,7 @@ def draw():
         fill(0)
         text(" weekly view ", 40, 155)
         
-        #text on page
+        # text on page
         
         if p_base_page:
             # text
@@ -156,7 +158,6 @@ def draw():
             text("S", 225, 520)
             text("S", 325, 520)
             
-
     # back buttons
     if p_page1 or p_page2 or p_page3 or p_page4 or p_page5 or p_page6 or p_page7:
         fill(220)
@@ -330,6 +331,7 @@ def draw():
         rect(350, 325, 40, 40, 10)
         rect(350, 385, 40, 40, 10)
     
+    
 def mousePressed():
     global homepage
     global progress_button, hydration_button
@@ -344,7 +346,8 @@ def mousePressed():
     global P5_button_colour1, P5_button_colour2, P5_button_colour3
     global P6_button_colour1, P6_button_colour2, P6_button_colour3
     global P7_button_colour1, P7_button_colour2, P7_button_colour3
-    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked, p5_all_checked, p6_all_checked, p7_all_checked
+    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked
+    global p5_all_checked, p6_all_checked, p7_all_checked
     
     if homepage:
         if mouseX >= 235 and mouseX <= 352.5:
@@ -418,8 +421,7 @@ def mousePressed():
                 P1_button_colour2 = p_done_colour
             elif mouseY >= 385 and mouseY <= 425:
                 P1_button_colour3 = p_done_colour
-                    
-                            
+                              
     if p_page2:
         if mouseX >= 350 and mouseX <= 390:
             if mouseY >= 265 and mouseY <= 305:
@@ -473,10 +475,3 @@ def mousePressed():
                 P7_button_colour2 = p_done_colour
             elif mouseY >= 385 and mouseY <= 425:
                 P7_button_colour3 = p_done_colour
-    
-        
-    
-    
-    
-    
-        
