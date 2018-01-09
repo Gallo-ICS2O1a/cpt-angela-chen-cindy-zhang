@@ -1,7 +1,10 @@
+# variables
 homepage = True
 progress_button = False
 hydration_button = False
 p_base_page = False
+h_base_page = False
+# 3 progress date pages
 p_pg1 = False
 p_pg2 = False
 p_pg3 = False
@@ -9,6 +12,7 @@ p_pg4 = False
 p_pg5 = False
 p_pg6 = False
 p_pg7 = False
+# progress weekly back buttons
 p_back1 = False
 p_back2 = False
 p_back3 = False
@@ -16,6 +20,7 @@ p_back4 = False
 p_back5 = False
 p_back6 = False
 p_back7 = False
+# progress checkboxes
 p_done_colour = color(174, 252, 223)
 P1_button_colour1 = 255
 P1_button_colour2 = 255
@@ -39,13 +44,25 @@ P7_button_colour1 = 255
 P7_button_colour2 = 255
 P7_button_colour3 = 255
 p_day_button_colour = color(240, 248, 255)
-p1_all_checked = False
-p2_all_checked = False
-p3_all_checked = False
-p4_all_checked = False
-p5_all_checked = False
-p6_all_checked = False
-p7_all_checked = False
+# hydration cup colours
+cupC1 = color(255)
+cupC2 = color(255)
+cupC3 = color(255)
+cupC4 = color(255)
+cupC5 = color(255)
+cupC6 = color(255)
+cupC7 = color(255)
+cupC8 = color(255)
+# hydration cups click detection buttons
+clicked_colour = color(176,224,230)
+cup1 = False
+cup2 = False
+cup3 = False
+cup4 = False
+cup5 = False
+cup6 = False
+cup7 = False 
+cup8 = False
 
 
 def setup():
@@ -57,7 +74,7 @@ def draw():
     global progress_button, hydration_button
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
-    global p_base_page
+    global p_base_page, h_base_page
     global p_done_colour, p_day_button_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
@@ -66,9 +83,11 @@ def draw():
     global P5_button_colour1, P5_button_colour2, P5_button_colour3
     global P6_button_colour1, P6_button_colour2, P6_button_colour3
     global P7_button_colour1, P7_button_colour2, P7_button_colour3
-    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked
-    global p5_all_checked, p6_all_checked, p7_all_checked
-    
+    global cup_base
+    global clicked_colour
+    global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
+    global cupC1, cupC2, cupC3, cupC4, cupC5, cupC6, cupC7, cupC8
+
     background(255)
     if homepage: 
         # icons at the bottom
@@ -103,7 +122,7 @@ def draw():
             the mint green is progress and the 
             turquoise tracks hydration.""", 210, 275) 
 
-    # base page
+    # progress base page
     if p_base_page:
         textAlign(LEFT)
         # icons at the bottom
@@ -330,14 +349,101 @@ def draw():
         fill(P7_button_colour2)
         rect(350, 325, 40, 40, 10)
         rect(350, 385, 40, 40, 10)
-    
+        
+    # hydration base page
+    if h_base_page:
+        textAlign(LEFT)
+        
+        # icons at the bottom
+        noStroke()
+        # light green (diet)
+        fill(216, 242, 104)
+        rect(0, 670, 117.5, 100)
+        # orange (exercise)
+        fill(244, 176, 107)
+        rect(117.5, 670, 117.5, 100)
+        # mint green (progress)
+        fill(174, 252, 223)
+        rect(235, 670, 117.5, 100)
+        # turquiose (hydration)
+        fill(94, 193, 192)
+        rect(352.5, 670, 117.5, 100)
+        
+        # hydration tracker
+        noStroke
+        
+        fill(cupC1)
+        rect(34, 200, 75, 175)
+        if cup1 == True:
+            cupC1 = clicked_colour 
+            
+        fill(cupC2)
+        rect(140, 200, 75, 175)
+        if cup2 == True:
+            cupC2 = clicked_colour
+            
+        fill(cupC3)
+        rect(245, 200, 75, 175)
+        if cup3 == True:
+            cupC3 = clicked_colour
+            
+        fill(cupC4)
+        rect(350, 200, 75, 175)
+        if cup4 == True:
+            cupC4 = clicked_colour
+            
+        fill(cupC5)
+        rect(34, 400, 75, 175)
+        if cup5 == True:
+            cupC5 = clicked_colour
+        
+        fill(cupC6)
+        rect(140, 400, 75, 175)
+        if cup6 == True:
+            cupC6 = clicked_colour
+        
+        fill(cupC7)
+        rect(245, 400, 75, 175)
+        if cup7 == True:
+            cupC7 = clicked_colour
+        
+        fill(cupC8)
+        rect(350, 400, 75, 175)    
+        if cup8 == True:
+            cupC8 = clicked_colour
+        
+        
+        # title
+        textSize(70)
+        fill(0)
+        text(" hydration ", 10, 100)
+        
+        # original boxes
+        for y in range(200, 525, 200):
+            for x in range(34, 436, 105):
+                stroke(155)
+                noFill()
+                rect(x, y, 75, 175)
+                
+        # numbers
+        textSize(50)
+        fill(0)
+        text("1", 57, 300)
+        text("2", 162, 300)
+        text("3", 265, 300)
+        text("4", 370, 300)
+        text("5", 57, 500)
+        text("6", 162, 500)
+        text("7", 265, 500)
+        text("8", 370, 500)
+        
     
 def mousePressed():
     global homepage
     global progress_button, hydration_button
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
-    global p_base_page
+    global p_base_page, h_base_page
     global p_done_colour, p_done_button_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
@@ -346,14 +452,20 @@ def mousePressed():
     global P5_button_colour1, P5_button_colour2, P5_button_colour3
     global P6_button_colour1, P6_button_colour2, P6_button_colour3
     global P7_button_colour1, P7_button_colour2, P7_button_colour3
-    global p1_all_checked, p2_all_checked, p3_all_checked, p4_all_checked
-    global p5_all_checked, p6_all_checked, p7_all_checked
-    
-    if homepage:
+    global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
+
+    if homepage or p_base_page or h_base_page:
         if mouseX >= 235 and mouseX <= 352.5:
             if mouseY >= 670 and mouseY <= 770:
                 p_base_page = True
                 homepage = False
+                h_base_page = False
+        
+        if mouseX >= 352.5 and mouseX <= 470:
+            if mouseY >= 670 and mouseY <= 770:
+                h_base_page = True
+                homepage = False
+                p_base_page = False
     
     # base page to day progress
     if p_base_page:
@@ -475,3 +587,37 @@ def mousePressed():
                 P7_button_colour2 = p_done_colour
             elif mouseY >= 385 and mouseY <= 425:
                 P7_button_colour3 = p_done_colour
+                
+    # hydrations page
+    if h_base_page:
+        if mouseX >= 34 and mouseX <= 109:
+            if mouseY <= 375 and mouseY >= 200:
+                cup1 = True
+        
+        if mouseX >= 143 and mouseX <= 218:
+            if mouseY <= 375 and mouseY >= 200:
+                cup2 = True
+                
+        if mouseX >= 252 and mouseX <= 327:
+            if mouseY <= 375 and mouseY >= 200:
+                cup3 = True
+                
+        if mouseX >= 361 and mouseX <= 436:
+            if mouseY <= 375 and mouseY >= 200:
+                cup4 = True
+                
+        if mouseX >= 34 and mouseX <= 109:
+            if mouseY >= 445 and mouseY <= 620:
+                cup5 = True
+                
+        if mouseX >= 143 and mouseX <= 218:
+            if mouseY >= 445 and mouseY <= 620:
+                cup6 = True
+        
+        if mouseX >= 252 and mouseX <= 327:
+            if mouseY >= 445 and mouseY <= 620:
+                cup7 = True
+                
+        if mouseX >= 361 and mouseX <= 436:
+            if mouseY >= 445 and mouseY <= 620:
+                cup8 = True
