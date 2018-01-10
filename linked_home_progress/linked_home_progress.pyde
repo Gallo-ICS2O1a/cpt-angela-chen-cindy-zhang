@@ -455,14 +455,12 @@ def mousePressed():
     global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
 
     if homepage or p_base_page or h_base_page:
-        if mouseX >= 235 and mouseX <= 352.5:
-            if mouseY >= 670 and mouseY <= 770:
+        if mouseX in range(235, 353.5) and mouseY in range(670, 771):
                 p_base_page = True
                 homepage = False
                 h_base_page = False
         
-        if mouseX >= 352.5 and mouseX <= 470:
-            if mouseY >= 670 and mouseY <= 770:
+        if mouseX in range(352.5, 471) and mouseY in range(670, 771):
                 h_base_page = True
                 homepage = False
                 p_base_page = False
@@ -470,51 +468,43 @@ def mousePressed():
     # base page to day progress
     if p_base_page:
         # page1 / monday
-        if mouseX >= 45 and mouseX <= 125:
-            if mouseY >= 200 and mouseY <= 400:
+        if mouseX in range(45, 126) and mouseY in range(200, 401):
                 p_pg1 = True
                 p_base_page = False
         
         # page2 / tuesday
-        if mouseX >= 145 and mouseX <= 225:
-            if mouseY >= 200 and mouseY <= 400:
+        if mouseX in range(145, 226) and mouseY in range(200, 401):
                 p_pg2 = True
                 p_base_page = False
             
         # page3 / wednesday
-        if mouseX >= 245 and mouseX <= 325:
-            if mouseY >= 200 and mouseY <= 400:
+        if mouseX in range(245, 326) and mouseY in range(200, 401):
                 p_pg3 = True
                 p_base_page = False
         
         # page4 / thursday
-        if mouseX >= 365 and mouseX <= 425:
-            if mouseY >= 200 and mouseY <= 400:
+        if mouseX in range(365, 426) and mouseY in range(200, 401):
                 p_pg4 = True
                 p_base_page = False
             
         # page5 / friday
-        if mouseX >= 100 and mouseX <= 180:
-            if mouseY >= 420 and mouseY <= 620:
+        if mouseX in range(100, 181) and mouseY in range(420, 621):
                 p_pg5 = True
                 p_base_page = False
         
         # page6 / saturday
-        if mouseX >= 200 and mouseX <= 280:
-            if mouseY >= 420 and mouseY <= 620:
+        if mouseX in range(200, 281) and mouseY in range(420, 621):
                 p_pg6 = True
                 p_base_page = False
                         
         # page7 / sunday
-        if mouseX >= 300 and mouseX <= 380:
-            if mouseY >= 420 and mouseY <= 620:
+        if mouseX in range(300, 381) and mouseY in range(420, 621):
                 p_pg7 = True
                 p_base_page = False
             
     # back buttons  
     if p_pg1 or p_pg2 or p_pg3 or p_pg4 or p_pg5 or p_pg6 or p_pg7:      
-        if mouseX >= 10 and mouseX <= 60:
-            if mouseY >= 10 and mouseY <= 40:
+        if mouseX in range(10, 61) and mouseY in range(10, 41):
                 p_pg1 = False
                 p_pg2 = False
                 p_pg3 = False
@@ -526,98 +516,90 @@ def mousePressed():
             
     # check box buttons
     if p_pg1:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P1_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 366):
                 P1_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P1_button_colour3 = p_done_colour
                               
     if p_pg2:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P2_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 365):
                 P2_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P2_button_colour3 = p_done_colour
                 
     if p_pg3:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P3_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 365):
                 P3_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P3_button_colour3 = p_done_colour
                 
     if p_pg4:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P4_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 366):
                 P4_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P4_button_colour3 = p_done_colour
                 
     if p_pg5:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P5_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 366):
                 P5_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P5_button_colour3 = p_done_colour
                 
     if p_pg6:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P6_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 366):
                 P6_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P6_button_colour3 = p_done_colour
                 
     if p_pg7:
-        if mouseX >= 350 and mouseX <= 390:
-            if mouseY >= 265 and mouseY <= 305:
+        if mouseX in range(350, 391):
+            if mouseY in range(265, 306):
                 P7_button_colour1 = p_done_colour
-            elif mouseY >= 325 and mouseY <= 365:
+            elif mouseY in range(325, 366):
                 P7_button_colour2 = p_done_colour
-            elif mouseY >= 385 and mouseY <= 425:
+            elif mouseY in range(385, 426):
                 P7_button_colour3 = p_done_colour
                 
     # hydrations page
     if h_base_page:
-        if mouseX >= 34 and mouseX <= 109:
-            if mouseY <= 375 and mouseY >= 200:
+        if mouseX in range(34, 110) and mouseY in range(375, 201):
                 cup1 = True
         
-        if mouseX >= 143 and mouseX <= 218:
-            if mouseY <= 375 and mouseY >= 200:
+        if mouseX in range(143, 219) and mouseY in range(200, 376):
                 cup2 = True
                 
-        if mouseX >= 252 and mouseX <= 327:
-            if mouseY <= 375 and mouseY >= 200:
+        if mouseX in range(252, 328) and mouseY in range(200, 376):
                 cup3 = True
                 
-        if mouseX >= 361 and mouseX <= 436:
-            if mouseY <= 375 and mouseY >= 200:
+        if mouseX in range(361, 437) and mouseY in range(200, 376):
                 cup4 = True
                 
-        if mouseX >= 34 and mouseX <= 109:
-            if mouseY >= 445 and mouseY <= 620:
+        if mouseX in range(34, 110) and mouseY in range(445, 621):
                 cup5 = True
                 
-        if mouseX >= 143 and mouseX <= 218:
-            if mouseY >= 445 and mouseY <= 620:
+        if mouseX in range(143, 219) and mouseY in range(445, 621):
                 cup6 = True
         
-        if mouseX >= 252 and mouseX <= 327:
-            if mouseY >= 445 and mouseY <= 620:
+        if mouseX in range(252, 328) and mouseY in range(445, 621):
                 cup7 = True
                 
-        if mouseX >= 361 and mouseX <= 436:
-            if mouseY >= 445 and mouseY <= 620:
+        if mouseX in range(361, 437) and mouseY in range(445, 621):
                 cup8 = True
