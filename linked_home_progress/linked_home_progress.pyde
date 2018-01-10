@@ -20,6 +20,14 @@ p_back4 = False
 p_back5 = False
 p_back6 = False
 p_back7 = False
+# progress weekly letter colour change
+p_mon_text = color(0)
+p_tues_text = color(0)
+p_wed_text = color(0)
+p_thurs_text = color(0)
+p_fri_text = color(0)
+p_sat_text = color(0)
+p_sun_text = color(0)
 # progress checkboxes
 p_done_colour = color(174, 252, 223)
 P1_button_colour1 = 255
@@ -43,7 +51,6 @@ P6_button_colour3 = 255
 P7_button_colour1 = 255
 P7_button_colour2 = 255
 P7_button_colour3 = 255
-p_day_button_colour = color(240, 248, 255)
 # hydration cup colours
 cupC1 = color(255)
 cupC2 = color(255)
@@ -75,7 +82,7 @@ def draw():
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
     global p_base_page, h_base_page
-    global p_done_colour, p_day_button_colour
+    global p_done_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
     global P3_button_colour1, P3_button_colour2, P3_button_colour3
@@ -87,6 +94,8 @@ def draw():
     global clicked_colour
     global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
     global cupC1, cupC2, cupC3, cupC4, cupC5, cupC6, cupC7, cupC8
+    global p_mon_text, p_tues_text, p_wed_text, p_thurs_text
+    global p_fri_text, p_sat_text, p_sun_text
 
     background(255)
     if homepage: 
@@ -168,14 +177,58 @@ def draw():
         if p_base_page:
             # text
             textSize(50)
-            fill(0)
+            fill(p_mon_text)
             text("M", 62.5, 300)
+            fill(p_tues_text)
             text("T", 170, 300)
+            fill(p_wed_text)
             text("W", 265, 300)
+            fill(p_thurs_text)
             text("T", 370, 300)
+            fill(p_fri_text)
             text("F", 125, 520)
+            fill(p_sat_text)
             text("S", 225, 520)
+            fill(p_sun_text)
             text("S", 325, 520)
+            
+    # changing letter colours
+        # monday
+        if mouseX in range(45, 126) and mouseY in range(200, 401):
+            p_mon_text = color(95,158,160)
+
+        # tuesday 
+        elif mouseX in range(145, 226) and mouseY in range(200, 401):
+            p_tues_text = color(95,158,160)
+            
+        # wednesday
+        elif mouseX in range(245, 326) and mouseY in range(200, 401):
+            p_wed_text = color(95,158,160)
+        
+        # thursday
+        elif mouseX in range(345, 426) and mouseY in range(200, 401):
+            p_thurs_text = color(95,158,160)
+ 
+        # friday
+        elif mouseX in range(100, 181) and mouseY in range(420, 621):
+            p_fri_text = color(95,158,160)
+        
+        # saturday
+        elif mouseX in range(200, 281) and mouseY in range(420, 621):
+            p_sat_text = color(95,158,160)
+    
+        # sunday
+        elif mouseX in range(300, 381) and mouseY in range(420, 621):
+            p_sun_text = color(95,158,160)
+            
+        else:
+            p_mon_text = 0
+            p_tues_text = 0
+            p_wed_text = 0
+            p_thurs_text = 0
+            p_fri_text = 0
+            p_sat_text = 0
+            p_sun_text = 0
             
     # back buttons
     if p_pg1 or p_pg2 or p_pg3 or p_pg4 or p_pg5 or p_pg6 or p_pg7:
@@ -444,7 +497,7 @@ def mousePressed():
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
     global p_base_page, h_base_page
-    global p_done_colour, p_done_button_colour
+    global p_done_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
     global P3_button_colour1, P3_button_colour2, P3_button_colour3
@@ -455,12 +508,12 @@ def mousePressed():
     global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
 
     if homepage or p_base_page or h_base_page:
-        if mouseX in range(235, 353.5) and mouseY in range(670, 771):
+        if mouseX in range(235, int(353.5)) and mouseY in range(670, 771):
                 p_base_page = True
                 homepage = False
                 h_base_page = False
         
-        if mouseX in range(352.5, 471) and mouseY in range(670, 771):
+        if mouseX in range(int(352.5), 471) and mouseY in range(670, 771):
                 h_base_page = True
                 homepage = False
                 p_base_page = False
@@ -580,7 +633,7 @@ def mousePressed():
                 
     # hydrations page
     if h_base_page:
-        if mouseX in range(34, 110) and mouseY in range(375, 201):
+        if mouseX in range(34, 110) and mouseY in range(200, 376):
                 cup1 = True
         
         if mouseX in range(143, 219) and mouseY in range(200, 376):
