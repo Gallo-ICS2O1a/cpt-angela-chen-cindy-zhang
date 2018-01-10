@@ -51,6 +51,15 @@ P6_button_colour3 = 255
 P7_button_colour1 = 255
 P7_button_colour2 = 255
 P7_button_colour3 = 255
+# hydration number colour change
+h_1cup_number = color(0)
+h_2cup_number = color(0)
+h_3cup_number = color(0)
+h_4cup_number = color(0)
+h_5cup_number = color(0)
+h_6cup_number = color(0)
+h_7cup_number = color(0)
+h_8cup_number = color(0)
 # hydration cup colours
 cupC1 = color(255)
 cupC2 = color(255)
@@ -96,6 +105,8 @@ def draw():
     global cupC1, cupC2, cupC3, cupC4, cupC5, cupC6, cupC7, cupC8
     global p_mon_text, p_tues_text, p_wed_text, p_thurs_text
     global p_fri_text, p_sat_text, p_sun_text
+    global h_1cup_number, h_2cup_number, h_3cup_number, h_4cup_number
+    global h_5cup_number, h_6cup_number, h_7cup_number, h_8cup_number
 
     background(255)
     if homepage: 
@@ -480,16 +491,65 @@ def draw():
                 
         # numbers
         textSize(50)
-        fill(0)
+        fill(h_1cup_number)
         text("1", 57, 300)
+        fill(h_2cup_number)
         text("2", 162, 300)
+        fill(h_3cup_number)
         text("3", 265, 300)
+        fill(h_4cup_number)
         text("4", 370, 300)
+        fill(h_5cup_number)
         text("5", 57, 500)
+        fill(h_6cup_number)
         text("6", 162, 500)
+        fill(h_7cup_number)
         text("7", 265, 500)
+        fill(h_8cup_number)
         text("8", 370, 500)
         
+        # 1
+        if mouseX in range(34, 111) and mouseY in range(200, 376):
+            h_1cup_number = color(95,158,160)
+       
+       # 2     
+        elif mouseX in range(140, 217) and mouseY in range(200, 376):
+            h_2cup_number = color(95,158,160)
+            
+        # 3
+        elif mouseX in range(246, 323) and mouseY in range(200, 376):
+            h_3cup_number = color(95,158,160)
+            
+       # 4
+        elif mouseX in range(352, 429) and mouseY in range(200, 376):
+            h_4cup_number = color(95,158,160)
+       
+       # 5     
+        elif mouseX in range(34, 111) and mouseY in range(400, 576):
+            h_5cup_number = color(95,158,160)
+        
+        # 6
+        elif mouseX in range(140, 217) and mouseY in range(400, 576):
+            h_6cup_number = color(95,158,160)
+            
+        # 7
+        elif mouseX in range(246, 323) and mouseY in range(400, 576):
+            h_7cup_number = color(95,158,160)
+        
+        # 8
+        elif mouseX in range(352, 429) and mouseY in range(400, 576):
+            h_8cup_number = color(95,158,160)
+            
+        else:
+            h_1cup_number = 0
+            h_2cup_number = 0
+            h_3cup_number = 0
+            h_4cup_number = 0
+            h_5cup_number = 0
+            h_6cup_number = 0
+            h_7cup_number = 0
+            h_8cup_number = 0
+            
     
 def mousePressed():
     global homepage
