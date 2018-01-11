@@ -438,42 +438,42 @@ def draw():
         
         fill(cupC1)
         rect(34, 200, 75, 175)
-        if cup1 == True:
+        if cup1:
             cupC1 = clicked_colour 
             
         fill(cupC2)
         rect(140, 200, 75, 175)
-        if cup2 == True:
+        if cup2:
             cupC2 = clicked_colour
             
         fill(cupC3)
         rect(245, 200, 75, 175)
-        if cup3 == True:
+        if cup3:
             cupC3 = clicked_colour
             
         fill(cupC4)
         rect(350, 200, 75, 175)
-        if cup4 == True:
+        if cup4:
             cupC4 = clicked_colour
             
         fill(cupC5)
         rect(34, 400, 75, 175)
-        if cup5 == True:
+        if cup5:
             cupC5 = clicked_colour
         
         fill(cupC6)
         rect(140, 400, 75, 175)
-        if cup6 == True:
+        if cup6:
             cupC6 = clicked_colour
         
         fill(cupC7)
         rect(245, 400, 75, 175)
-        if cup7 == True:
+        if cup7:
             cupC7 = clicked_colour
         
         fill(cupC8)
         rect(350, 400, 75, 175)    
-        if cup8 == True:
+        if cup8:
             cupC8 = clicked_colour
         
         # title
@@ -507,35 +507,35 @@ def draw():
         fill(h_8cup_number)
         text("8", 370, 500)
         
-        # 1
+    # 1
         if mouseX in range(34, 111) and mouseY in range(200, 376):
             h_1cup_number = color(95, 158, 160)
        
-       # 2     
+    # 2   
         elif mouseX in range(140, 217) and mouseY in range(200, 376):
             h_2cup_number = color(95, 158, 160)
             
-        # 3
+    # 3
         elif mouseX in range(246, 323) and mouseY in range(200, 376):
             h_3cup_number = color(95, 158, 160)
             
-       # 4
+    # 4
         elif mouseX in range(352, 429) and mouseY in range(200, 376):
             h_4cup_number = color(95, 158, 160)
        
-       # 5     
+    # 5     
         elif mouseX in range(34, 111) and mouseY in range(400, 576):
             h_5cup_number = color(95, 158, 160)
         
-        # 6
+    # 6
         elif mouseX in range(140, 217) and mouseY in range(400, 576):
             h_6cup_number = color(95, 158, 160)
             
-        # 7
+    # 7
         elif mouseX in range(246, 323) and mouseY in range(400, 576):
             h_7cup_number = color(95, 158, 160)
         
-        # 8
+    # 8
         elif mouseX in range(352, 429) and mouseY in range(400, 576):
             h_8cup_number = color(95, 158, 160)
             
@@ -715,4 +715,3 @@ def mousePressed():
                 
         if mouseX in range(361, 437) and mouseY in range(445, 621):
                 cup8 = True
-                
