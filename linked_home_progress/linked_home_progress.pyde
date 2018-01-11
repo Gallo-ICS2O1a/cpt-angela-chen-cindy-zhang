@@ -439,6 +439,7 @@ def draw():
         rect(350, 265, 40, 40, 10)
         fill(P7_button_colour2)
         rect(350, 325, 40, 40, 10)
+        fill(P7_button_colour3)
         rect(350, 385, 40, 40, 10)
         
     # hydration base page
