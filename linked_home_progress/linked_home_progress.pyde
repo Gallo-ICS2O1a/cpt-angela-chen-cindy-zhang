@@ -109,6 +109,37 @@ def draw():
     global h_5cup_number, h_6cup_number, h_7cup_number, h_8cup_number
 
     background(255)
+# icons at the bottom
+    noStroke()
+    # light green (diet)
+    fill(216, 242, 104)
+    rect(0, 670, 117.5, 100)
+    # orange (exercise)
+    fill(244, 176, 107)
+    rect(117.5, 670, 117.5, 100)
+    # mint green (progress)
+    fill(174, 252, 223)
+    rect(235, 670, 117.5, 100)
+    # turquiose (hydration)
+    fill(94, 193, 192)
+    rect(352.5, 670, 117.5, 100)
+    
+    # diet image icon
+    diet = loadImage("diet_2.0.png")
+    image(diet, 20, 680, 80, 80)
+    
+    # exercise image icon
+    exercise = loadImage("dumbbell_2.0.png")
+    image(exercise, 137.5, 680, 80, 80)
+    
+    # progress image icon
+    progress = loadImage("calendar_2.0.png")
+    image(progress, 255, 680, 80, 80)
+    
+    # hydration image icon
+    hydration = loadImage("hydration_3.0.png")
+    image(hydration, 372.5, 680, 80, 80)
+        
     if homepage: 
         # icons at the bottom
         noStroke()
@@ -124,6 +155,22 @@ def draw():
         # turquiose (hydration)
         fill(94, 193, 192)
         rect(352.5, 670, 117.5, 100)
+        
+        # diet image icon
+        diet = loadImage("diet_2.0.png")
+        image(diet, 20, 680, 80, 80)
+        
+        # exercise image icon
+        exercise = loadImage("dumbbell_2.0.png")
+        image(exercise, 137.5, 680, 80, 80)
+        
+        # progress image icon
+        progress = loadImage("calendar_2.0.png")
+        image(progress, 255, 680, 80, 80)
+        
+        # hydration image icon
+        hydration = loadImage("hydration_3.0.png")
+        image(hydration, 372.5, 680, 80, 80)
         
         # title
         textSize(70)
@@ -142,23 +189,18 @@ def draw():
             the mint green is progress and the 
             turquoise tracks hydration.""", 210, 275) 
 
+        # labels 
+        textSize(16)
+        fill(0)
+        text("DIET", 60, 660)
+        text("EXERCISE", 175, 660)
+        text("PROGRESS", 295, 660)
+        text("HYDRATION", 410, 660)
+        
+        
     # progress base page
     if p_base_page:
         textAlign(LEFT)
-        # icons at the bottom
-        noStroke()
-        # light green (diet)
-        fill(216, 242, 104)
-        rect(0, 670, 117.5, 100)
-        # orange (exercise)
-        fill(244, 176, 107)
-        rect(117.5, 670, 117.5, 100)
-        # mint green (progress)
-        fill(174, 252, 223)
-        rect(235, 670, 117.5, 100)
-        # turquiose (hydration)
-        fill(94, 193, 192)
-        rect(352.5, 670, 117.5, 100)
         
         # weekly calendar boxes
         for y in range(200, 420, 220):
@@ -245,21 +287,6 @@ def draw():
     if p_pg1 or p_pg2 or p_pg3 or p_pg4 or p_pg5 or p_pg6 or p_pg7:
         fill(220)
         rect(10, 10, 50, 30, 20)
-        
-        # icons at the bottom
-        noStroke()
-        # light green (diet)
-        fill(216, 242, 104)
-        rect(0, 670, 117.5, 100)
-        # orange (exercise)
-        fill(244, 176, 107)
-        rect(117.5, 670, 117.5, 100)
-        # mint green (progress)
-        fill(174, 252, 223)
-        rect(235, 670, 117.5, 100)
-        # turquiose (hydration)
-        fill(94, 193, 192)
-        rect(352.5, 670, 117.5, 100)
     
     # day page checkboxes
     if p_pg1:
@@ -417,22 +444,7 @@ def draw():
     # hydration base page
     if h_base_page:
         textAlign(LEFT)
-        
-        # icons at the bottom
-        noStroke()
-        # light green (diet)
-        fill(216, 242, 104)
-        rect(0, 670, 117.5, 100)
-        # orange (exercise)
-        fill(244, 176, 107)
-        rect(117.5, 670, 117.5, 100)
-        # mint green (progress)
-        fill(174, 252, 223)
-        rect(235, 670, 117.5, 100)
-        # turquiose (hydration)
-        fill(94, 193, 192)
-        rect(352.5, 670, 117.5, 100)
-        
+
         # hydration tracker
         noStroke
         
