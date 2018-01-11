@@ -70,7 +70,7 @@ cupC6 = color(255)
 cupC7 = color(255)
 cupC8 = color(255)
 # hydration cups click detection buttons
-clicked_colour = color(176,224,230)
+clicked_colour = color(176, 224, 230)
 cup1 = False
 cup2 = False
 cup3 = False
@@ -206,31 +206,31 @@ def draw():
     # changing letter colours
         # monday
         if mouseX in range(45, 126) and mouseY in range(200, 401):
-            p_mon_text = color(95,158,160)
+            p_mon_text = color(95, 158, 160)
 
         # tuesday 
         elif mouseX in range(145, 226) and mouseY in range(200, 401):
-            p_tues_text = color(95,158,160)
+            p_tues_text = color(95, 158, 160)
             
         # wednesday
         elif mouseX in range(245, 326) and mouseY in range(200, 401):
-            p_wed_text = color(95,158,160)
+            p_wed_text = color(95, 158, 160)
         
         # thursday
         elif mouseX in range(345, 426) and mouseY in range(200, 401):
-            p_thurs_text = color(95,158,160)
+            p_thurs_text = color(95, 158, 160)
  
         # friday
         elif mouseX in range(100, 181) and mouseY in range(420, 621):
-            p_fri_text = color(95,158,160)
+            p_fri_text = color(95, 158, 160)
         
         # saturday
         elif mouseX in range(200, 281) and mouseY in range(420, 621):
-            p_sat_text = color(95,158,160)
+            p_sat_text = color(95, 158, 160)
     
         # sunday
         elif mouseX in range(300, 381) and mouseY in range(420, 621):
-            p_sun_text = color(95,158,160)
+            p_sun_text = color(95, 158, 160)
             
         else:
             p_mon_text = 0
@@ -476,7 +476,6 @@ def draw():
         if cup8 == True:
             cupC8 = clicked_colour
         
-        
         # title
         textSize(70)
         fill(0)
@@ -510,35 +509,35 @@ def draw():
         
         # 1
         if mouseX in range(34, 111) and mouseY in range(200, 376):
-            h_1cup_number = color(95,158,160)
+            h_1cup_number = color(95, 158, 160)
        
        # 2     
         elif mouseX in range(140, 217) and mouseY in range(200, 376):
-            h_2cup_number = color(95,158,160)
+            h_2cup_number = color(95, 158, 160)
             
         # 3
         elif mouseX in range(246, 323) and mouseY in range(200, 376):
-            h_3cup_number = color(95,158,160)
+            h_3cup_number = color(95, 158, 160)
             
        # 4
         elif mouseX in range(352, 429) and mouseY in range(200, 376):
-            h_4cup_number = color(95,158,160)
+            h_4cup_number = color(95, 158, 160)
        
        # 5     
         elif mouseX in range(34, 111) and mouseY in range(400, 576):
-            h_5cup_number = color(95,158,160)
+            h_5cup_number = color(95, 158, 160)
         
         # 6
         elif mouseX in range(140, 217) and mouseY in range(400, 576):
-            h_6cup_number = color(95,158,160)
+            h_6cup_number = color(95, 158, 160)
             
         # 7
         elif mouseX in range(246, 323) and mouseY in range(400, 576):
-            h_7cup_number = color(95,158,160)
+            h_7cup_number = color(95, 158, 160)
         
         # 8
         elif mouseX in range(352, 429) and mouseY in range(400, 576):
-            h_8cup_number = color(95,158,160)
+            h_8cup_number = color(95, 158, 160)
             
         else:
             h_1cup_number = 0
@@ -716,3 +715,4 @@ def mousePressed():
                 
         if mouseX in range(361, 437) and mouseY in range(445, 621):
                 cup8 = True
+                
