@@ -4,6 +4,8 @@ progress_button = False
 hydration_button = False
 p_base_page = False
 h_base_page = False
+d_base_page = False
+e_base_page = False
 # 3 progress date pages
 p_pg1 = False
 p_pg2 = False
@@ -90,7 +92,7 @@ def draw():
     global progress_button, hydration_button
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
-    global p_base_page, h_base_page
+    global p_base_page, h_base_page, d_base_page, e_base_page
     global p_done_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
@@ -197,7 +199,71 @@ def draw():
         text("PROGRESS", 295, 660)
         text("HYDRATION", 410, 660)
         
+    # diet base page 
+    if d_base_page:
+        textAlign(LEFT)
         
+        # title
+        textSize(55)
+        fill(0)
+        text(" DIET ", 15, 90)
+        textSize(35)
+        text("RECIPES FOR DINNER", 35, 130)
+        
+        textSize(14)
+        fill(242, 161, 118)
+        text("*click on underlined names to get recipe", 35, 150)
+        
+        # monday
+        textSize(20)
+        fill(0)
+        text("MONDAY", 35, 185)
+        textSize(16)
+        text("sphaghetti diablo with shrimp", 35, 205)
+        rect(35, 208, 238, 1)
+        
+        # tuesday
+        textSize(20)
+        text("TUESDAY", 35, 245)
+        textSize(16)
+        text("baked tilapia", 35, 265)
+        rect(35, 268, 100, 1)
+        
+        # wednesday
+        textSize(20)
+        text("WEDNESDAY", 35, 305)
+        textSize(16)
+        text("spinach & sun dried tomato pasta", 35, 325)
+        rect(35, 328, 265, 1)
+        
+        # thursday
+        textSize(20)
+        text("THURSDAY", 35, 365)
+        textSize(16)
+        text("bean quesadillas", 35, 385)
+        rect(35, 388, 132, 1)
+        
+        # friday
+        textSize(20)
+        text("FRIDAY", 35, 425)
+        textSize(16)
+        text("toasted buckewheat tabbouleh", 35, 445)
+        rect(35, 448, 240, 1)
+        
+        # saturday 
+        textSize(20)
+        text("SATURDAY", 35, 485)
+        textSize(16)
+        text("black bean veggie burger", 35, 505)
+        rect(35, 508, 200, 1)
+        
+        # sunday
+        textSize(20)
+        text("SUNDAY", 35, 545)
+        textSize(16)
+        text("grilled fish tacos with chipotle-lime dressing", 35, 565)
+        rect(35, 568, 352, 1)
+    
     # progress base page
     if p_base_page:
         textAlign(LEFT)
@@ -568,7 +634,7 @@ def mousePressed():
     global progress_button, hydration_button
     global p_pg1, p_pg2, p_pg3, p_pg4, p_pg5, p_pg6, p_pg7
     global p_back1, p_back2, p_back3, p_back4, p_back5, p_back6, p_back7
-    global p_base_page, h_base_page
+    global p_base_page, h_base_page, d_base_page, e_base_page
     global p_done_colour
     global P1_button_colour1, P1_button_colour2, P1_button_colour3
     global P2_button_colour1, P2_button_colour2, P2_button_colour3
@@ -579,17 +645,58 @@ def mousePressed():
     global P7_button_colour1, P7_button_colour2, P7_button_colour3
     global cup1, cup2, cup3, cup4, cup5, cup6, cup7, cup8
 
-    if homepage or p_base_page or h_base_page:
+    if homepage or p_base_page or h_base_page or d_base_page or e_base_page:
+        if mouseX in range(0, int(118.5)) and mouseY in range(670, 771):
+            d_base_page = True
+            homepage = False
+            h_base_page = False
+            p_base_page = False
+            e_base_page = False
+            
+        if mouseX in range(int(117.7), 236) and mouseY in range(670, 771):
+            e_base_page = True
+            homepage = False
+            h_base_page = False
+            p_base_page = False
+            d_base_page = False
+            
         if mouseX in range(235, int(353.5)) and mouseY in range(670, 771):
-                p_base_page = True
-                homepage = False
-                h_base_page = False
-        
-        if mouseX in range(int(352.5), 471) and mouseY in range(670, 771):
-                h_base_page = True
-                homepage = False
-                p_base_page = False
+            p_base_page = True
+            homepage = False
+            h_base_page = False
+            d_base_page = False
+            e_base_page = False
     
+        if mouseX in range(int(352.5), 471) and mouseY in range(670, 771):
+            h_base_page = True
+            homepage = False
+            p_base_page = False
+            d_base_page = False
+            e_base_page = False
+    
+    # diet page links to recipes 
+    if d_base_page:
+        if mouseX in range(35, 274) and mouseY in range(188, 214):
+            m_recipe = link("http://allrecipes.com/recipe/222968/spaghetti-diablo-with-shrimp/?internalSource=staff%20pick&referringId=1320&referringContentType=recipe%20hub")
+    
+        if mouseX in range(35, 136) and mouseY in range(248, 274):
+            t_recipe = link("http://allrecipes.com/recipe/70163/easy-baked-tilapia/?internalSource=hub%20recipe&referringId=1320&referringContentType=recipe%20hub")
+        
+        if mouseX in range(35, 301) and mouseY in range(308, 334):
+            w_recipe = link("http://allrecipes.com/recipe/73208/spinach-and-sun-dried-tomato-pasta/?internalSource=hub%20recipe&referringId=1320&referringContentType=recipe%20hub")
+            
+        if mouseX in range(35, 168) and mouseY in range(368, 394):
+            th_recipe = link("http://allrecipes.com/recipe/14144/bean-quesadillas/?internalSource=staff%20pick&referringId=14962&referringContentType=recipe%20hub")
+            
+        if mouseX in range(35, 276) and mouseY in range(428, 454):
+            f_recipe = link("http://allrecipes.com/recipe/228526/toasted-buckwheat-tabbouleh/?internalSource=staff%20pick&referringId=1346&referringContentType=recipe%20hub")
+            
+        if mouseX in range(35, 236) and mouseY in range(488, 514):
+            s_recipe = link("http://allrecipes.com/recipe/85452/homemade-black-bean-veggie-burgers/?internalSource=hub%20recipe&referringId=14962&referringContentType=recipe%20hub")
+            
+        if mouseX in range(35, 388) and mouseY in range(548, 574):
+            su_recipe = link("http://allrecipes.com/recipe/142614/grilled-fish-tacos-with-chipotle-lime-dressing/?internalSource=hub%20recipe&referringId=16374&referringContentType=recipe%20hub")
+        
     # base page to day progress
     if p_base_page:
         # page1 / monday
