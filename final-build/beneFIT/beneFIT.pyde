@@ -1,7 +1,5 @@
 # setup
 page = 1
-home_width = 470
-home_height = 150
 # page1
 pg1_orange = color(255, 147, 102)
 pg1_text = color(255)
@@ -25,7 +23,7 @@ surveyHydrationButton = color(94, 193, 192)
 survey_option = 0
 # progress date page
 p_page = 0
-# progress weekly letter colour change
+# progress weekly letter colours variables
 p_mon_text = color(0)
 p_tues_text = color(0)
 p_wed_text = color(0)
@@ -33,7 +31,7 @@ p_thurs_text = color(0)
 p_fri_text = color(0)
 p_sat_text = color(0)
 p_sun_text = color(0)
-# progress weekly letter colour change
+# progress weekly letter colours variables
 p_mon_text = color(0)
 p_tues_text = color(0)
 p_wed_text = color(0)
@@ -41,7 +39,7 @@ p_thurs_text = color(0)
 p_fri_text = color(0)
 p_sat_text = color(0)
 p_sun_text = color(0)
-# progress checkboxes
+# progress checkboxes colours variables
 p_done_colour = color(174, 252, 223)
 P1_button_colour1 = color(255)
 P1_button_colour2 = color(255)
@@ -114,7 +112,10 @@ S_ExerciseGM = loadImage("GainMuscle2.jpg")
 S_ExerciseBFO = loadImage("BeFitOverall2.jpg")
 body_workout = loadImage("body_parts.png")
 geometric = loadImage("geometric.png")
-
+progresspage = loadImage("progress.png")
+exercise = loadImage("dumbbell_2.0.png")
+progress = loadImage("calendar_2.0.png")
+hydration = loadImage("hydration_3.0.png")
 
 def setup():
     global LoseWeight, GainMuscle, BeFitOverall, backbutton
@@ -122,6 +123,7 @@ def setup():
     global diet, meat, proteinshake, carbs, salad, peaches, healthy
     global S_ExerciseLW, S_ExerciseGM, S_ExerciseBFO
     global body_workout, geometric
+    global progresspage, exercise, progress, hydration
 
     # size of program
     size(470, 770)
@@ -147,7 +149,10 @@ def setup():
     S_ExerciseBFO = loadImage("BeFitOverall2.jpg")
     body_workout = loadImage("body_parts.png")
     geometric = loadImage("geometric.png")
-
+    progresspage = loadImage("progress.png")
+    exercise = loadImage("dumbbell_2.0.png")
+    progress = loadImage("calendar_2.0.png")
+    hydration = loadImage("hydration_3.0.png")
 
 def draw():
     global page, s_page, p_page
@@ -194,6 +199,11 @@ def draw():
         font1 = loadFont("HPSimplified-Regular-48.vlw")
         textFont(font1, 85)
         text(" beneFIT+ ", 60, 300)
+
+        # caption
+        fill(100)
+        textSize(30)
+        text("The Fitness Tracker app you need!", 20, 350)
 
         # survey button
         fill(pg1_orange)
@@ -971,8 +981,7 @@ TRICEPS""", 300, 295)
 
     # progress page
     if page == 9:
-        progress = loadImage("progress.png")
-        image(progress, 70, 470, 400, 250)
+        image(progresspage, 70, 470, 400, 250)
         # weekly calendar boxes
         for y in range(200, 420, 220):
             for x in range(45, 410, 100):
@@ -1054,8 +1063,7 @@ to track your progress.""", 235, 140)
 
 # back buttons
     if p_page in range(1, 8):
-        progress = loadImage("progress.png")
-        image(progress, 70, 470, 400, 250)
+        image(progresspage, 70, 470, 400, 250)
         fill(220)
         rect(10, 10, 50, 30, 20)
 
@@ -1329,15 +1337,12 @@ Your goal is to drink 8 cups a day!""", 235, 130)
         image(diet, 20, 680, 80, 80)
 
         # exercise image icon
-        exercise = loadImage("dumbbell_2.0.png")
         image(exercise, 137.5, 680, 80, 80)
 
         # progress image icon
-        progress = loadImage("calendar_2.0.png")
         image(progress, 255, 680, 80, 80)
 
         # hydration image icon
-        hydration = loadImage("hydration_3.0.png")
         image(hydration, 372.5, 680, 80, 80)
 
 
