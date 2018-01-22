@@ -117,6 +117,7 @@ exercise = loadImage("dumbbell_2.0.png")
 progress = loadImage("calendar_2.0.png")
 hydration = loadImage("hydration_3.0.png")
 
+
 def setup():
     global LoseWeight, GainMuscle, BeFitOverall, backbutton
     global breakfast, water, unprocessed, sweets
@@ -153,6 +154,7 @@ def setup():
     exercise = loadImage("dumbbell_2.0.png")
     progress = loadImage("calendar_2.0.png")
     hydration = loadImage("hydration_3.0.png")
+
 
 def draw():
     global page, s_page, p_page
